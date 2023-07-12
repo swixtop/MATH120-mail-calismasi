@@ -1,1 +1,0 @@
-# MATH120-mail-calismasi
