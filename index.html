@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MATH120 Dayanışma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>MATH120 İçin E-posta Çalışması</h1>
+            <nav>
+                <a class="button" href="contact.html">İletişim</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <p>MATH120 için iki adet e-posta atacağız. Biri bölüm hocalarına öneriler sunan bir e-posta, diğeri de sunduğumuz önerileri de belirten dekanlığa bilgilendirme e-postası olacak.</p>
+                <p>E-posta atmak için aşağıdaki butonları kullanabilirsiniz. Lütfen göndermeden "Kişiler" ve "CC(Karbon Kopya)" kısımlarınızda çıkan yerleri kontrol edin. Kontrollerinizi bitirmeden yollamayın.</p>
+                <p>Manuel bir şekilde e-posta atmak istiyorsanız e-posta içerikleri ile <a href="https://docs.google.com/document/d/1BAyBlalGy_r9Vs3DBHZrAyGRW4Nnhrds23f32UdbuKY/edit?usp=sharing" target="_blank">ilgili dosya için tıklayın.</a></p>
+                <button class="button" onclick="openEmail()">Bölüm Hocalarına Atılacak E-posta</button>
+                <button class="button" onclick="openEmail2()">Dekanlığa Atılacak E-posta</button>
+
+                <script>
+                    function openEmail() {
+                        var to = "tastuner@metu.edu.tr; muhid@metu.edu.tr; wwwma120@metu.edu.tr";
+                        var cc = "taseli@metu.edu.tr; marat@metu.edu.tr; tkarayay@metu.edu.tr; skagan@metu.edu.tr; esolak@metu.edu.tr; tuncayb@metu.edu.tr; gtop@metu.edu.tr; bhupal@metu.edu.tr; nazmi@metu.edu.tr";
+                        var subject = "MATH120 İçin Alternatifler";
+                        var body = "Saygıdeğer Matematik Bölümü Öğretim Görevlileri,\n\n"
+                            + "Yaz okulunda 120’nin açılmayacağı ile çok önceden karar verilmesinden dolayı çoğu dersi verebilecek hocamızın tatilde olduğunu göz önünde bulundurarak bazı çözüm yolları bulmaya çalıştık. Sizin de yardımınız ile ortak bir yol bularak birçok öğrencinin ikinci dönemki olağanüstü durumdan daha az etkilenerek sene uzatmadan devam etmelerini sağlayabiliriz.\n\n"
+                            + "\t1. Yaz okulu için ders işlenmeyecek şekilde sadece hazırda bulunan ders videoları ve ders notlarının kullanılmasına razıyız.\n"
+                            + "\t2. Eğer ders işlenmesi zorunlu ise bunun Zoom üzerinden çevrim içi olarak gerçekleştirilmesi dersi verebilecek hocalarımız için esneklik sağlayacaktır.\n"
+                            + "\t3. Çevrim içi ders işlenmesini hibritleştirebiliriz. Yani normal ders anlatımı videolar aracılığı ile olup ders verme yükü hocalarımızın üzerinden alınırken sadece recitation’lar veya office hour’lar çevrim içi olarak verilebilir.\n"
+                            + "\t4. Yüz yüze sınavlar için yeterli gözetmen olmaması halinde sınava girecek kişiler için oturum paylaştırılması yapılabilir. Örneğin bir günde bir oturumda biteceğine bir günde iki oturumda bitirilebilir. Gerekirse sınav tarihi de güz dönemi ders seçimlerinin öncesindeki aya ertelenebilir.\n"
+                            + "\t5. Sonuçların ilanının gecikmesi önemli değil. Güz dönemi ders kayıtları başlamadan önce ne kadar geç olursa olsun herhangi bir tarihte ilan edilmesi yeterli. Hocalarımıza uygun tarihlerde kağıtların okunması herkesin yararına olacaktır.\n\n"
+                            + "Kısacası sadece YouTube’daki veya Zoom’daki kayıtları kullanmanıza ve sınavın bir şekilde yapılmasıyla hocalarımızın üzerine yük bindirmeden 120 alabilmek istiyoruz. Öğrenci olduğumuz ve sistemin işleyişi konusunda bilgi eksikliğimizden dolayı yukarıdaki çözümlerin çoğunun uygulanamayacağı ihtimalinin farkındayız ve bu dersi almak istiyoruz. Bu konudaki düşüncelerinizi bekliyoruz.  İlginiz için teşekkür ederiz. İlginiz için teşekkür ederiz.\n\n"
+                            + "Sevgilerle.\n\n"
+                            + "MATH120 Öğrencileri";
+
+                        var mailtoLink = "mailto:" + to + "?cc=" + cc + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                        window.location.href = mailtoLink;
+                    }
+                    function openEmail2() {
+                        var to2 = "tastuner@metu.edu.tr; muhid@metu.edu.tr; wwwma120@metu.edu.tr";
+                        var cc2 = "";
+                        var subject2 = "MATH120 Yaz Okulu Hk.";
+                        var body2 = "Fen Edebiyat Fakültesi dekanlığına;\n\n"
+                            + "Matematik departmanı tarafından 15 Aralık tarihinde yapılan duyuruda yaz okulunda MATH120 dersinin açılmayacağı söylenmişti.\n\n"
+                            + "Bildiğiniz üzere MATH120’nin ikinci yıl birinci dönem dahil bağladığı birçok bölümde birçok ders var. Bu yaz alınamaması durumunda çoğu öğrencinin okulu bir yıl uzayacak ya da prob durumunda olanlar için maksimum öğretim yılı süreleri riske girecek. Bu dersi alan çoğu öğrencinin birinci sınıf olduğunu varsayarsak hiçbirimizin dersi ilk dönem alma şansı olamadı ve ilk kez ikinci dönem aldığımız bir ders nedeniyle okulumuzun bir yıl uzaması hepimizi epeyce etkileyecek. Üstelik depremden ötürü olağanüstü bir dönem yaşandı. Sınav ve ders zaman çizelgesinin sıkışıklığı, sınav yüzdelerinin daha önce hiç olmadığı kadar değişmesi ve neredeyse tek başına finalin belirleyici olması durumuyla da karşı karşıya kalındı. Dersin yaz okulunda açılmaması pek çok arkadaşımızın burslarının kesilmesine de yol açacak. Sizden yaşadığımız olağanüstü şartların da öğrenciler üzerine olan etkilerini göz önünde bulundurarak verilen bu  kararı tekrar gözden geçirmenizi ve MATH120 dersinin yaz okulunda açılmasını talep ediyoruz.\n\n"
+                            + "İlgili durumu Matematik Bölümü Öğretim Görevlileri ile görüşmeye çalışıyoruz. Açılmayacağını dile getirdikleri için alternatif çözüm yolları öneriyoruz. Bölüm hocalarına:\n\n"
+                            + "\t1. Ders işlenmesine gerek kalmadan sadece sınav yapılması, halihazırdaki ders videoları ve ders notlarının kullanılması ile bölüm hocalarının üzerinden ders verme yükünün alınması,\n"
+                            + "\t2. Ders verme zorunluluğu varsa bunun Zoom üzerinden çevrim içi yapılması,\n"
+                            + "\t3. Hatta gerekirse hibrit bir şekilde derslerin sadece videolardan ilerlemesi, sadece recitation ve office hour’ların Zoom üzerinden ilerlemesi,\n"
+                            + "\t4. Çoğu hocanın şehir dışında olduğu göz önünde bulundurularak Güz Dönemi başlangıcının belli bir süre öncesine kadar sınav tarihlerinin ertelenebileceği veya sınavlar yapıldıktan sonra sonuçların okunmasında hocaların üzerindeki yükü azaltmak için ertelenebileceği önerilerimizi ilettik.\n\n"
+                            + "Öğrenci olduğumuz ve sistemin işleyişi konusunda bilgi eksikliğimizden dolayı yukarıdaki çözümlerin çoğunun uygulanamayacağı ihtimalinin farkındayız ve bu dersi almak istiyoruz. Bize yardımcı olmanızı rica ediyoruz. İlginiz için teşekkür ederiz.\n\n"
+                            + "Saygılarımızla.\n\n"
+                            + "MATH120 Öğrencileri";
+
+                        var mailtoLink2 = "mailto:" + to2 + "?cc=" + cc2 + "&subject=" + encodeURIComponent(subject2) + "&body=" + encodeURIComponent(body2);
+                        window.location.href = mailtoLink2;
+                    }
+                </script>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 MATH120 Akıl Sağlığı Dayanışması. Tüm Hakları Saklıdır.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
